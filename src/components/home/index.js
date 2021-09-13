@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import Input from "../input";
-const Home = ({ members, newMember, setNewMember }) => {
+const Home = ({ newMember, setNewMember }) => {
   return (
     <>
-      {members.map((element, index) =>
+      {newMember.map((element, index) =>
         element.type === "pj" ? (
-          <Link key={index} to to={`/company/${element.id}`}>
+          <Link key={index} to={`/company/${element.id}`}>
             {element.name}
           </Link>
         ) : (
