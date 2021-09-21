@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 
 const Input = ({ newMember, setNewMember }) => {
   const [name, setName] = useState();
@@ -18,14 +18,14 @@ const Input = ({ newMember, setNewMember }) => {
         value="pf"
         onChange={(event) => setType(event.target.value)}
       />
-      <label for="pf">PF</label>
+      <label htmlFor="pf">PF</label>
       <input
         type="radio"
         name="type"
         value="pj"
         onChange={(event) => setType(event.target.value)}
       />
-      <label for="pj">PJ</label>
+      <label htmlFor="pj">PJ</label>
       <input value="New" type="button" onClick={() => addMember(name, type)} />
     </>
   );
